@@ -1,0 +1,15 @@
+.cell-list {
+  /*
+  - why 50vh? prevent the "snap" of the previous cells 
+    when resizing a cell
+*/
+  margin: 0 25px 50vh;
+}
+
+/*
+  - prevent the "snap" effect when you drag the last 
+    cell back and forth quickly  
+*/
+.react-draggable-transparent-selection .cell-list {
+  margin-bottom: 100vh;
+}

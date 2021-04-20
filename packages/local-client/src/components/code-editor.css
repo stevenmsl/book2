@@ -1,0 +1,22 @@
+.editor-wrapper {
+  position: relative;
+  height: 100%;
+  /* 
+    - leave some room for the horizontal bar
+      so it can show next to the editor 
+  */
+  width: calc(100% - 10px);
+}
+
+.editor-wrapper .button-format {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.editor-wrapper:hover .button-format {
+  opacity: 1;
+}

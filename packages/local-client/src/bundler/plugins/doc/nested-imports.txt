@@ -1,0 +1,12 @@
+When you trying to download packages from unpkg the location of 
+the index.js might be different. Here are two examples:
+
+https://unpkg.com/tiny-test-pkg will change to 
+https://unpkg.com/tiny-test-pkg@1.0.0/index.js
+
+https://unpkg.com/nested-test-pkg will change to 
+https://unpkg.com/nested-test-pkg@1.0.0/src/index.js
+
+You can notice that for nested-test-pkg the index.js is located under src folder 
+whereas for tiny-test-pkg it is not. By default the args.importer might not be 100
+percent accurate when dealing with nested imports.

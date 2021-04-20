@@ -1,0 +1,36 @@
+.progress-wrapper {
+  height: 100%;
+  flex-grow: 1;
+  background-color: white;
+}
+.progress-cover {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  animation: fadeIn 0.5s;
+}
+
+/*
+  - the definiton of fadeIn
+  - in the first 0.25 seconds the progress bar 
+    remains invisible
+  - after 0.25 seconds, the progressbar starts
+    to fade in
+  - as a result, users won't see the progress bar
+    at all if the bundling process takes less than
+    0.25 seconds
+*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
