@@ -1,0 +1,27 @@
+cli 
+  - It provides an entry point to launch the app locally via NPM
+    - npx jbook2-msl serve
+  - It depends on the commander package to behave just like other
+    cli(s)    
+  - It depends on the local-api. The reason that we list local-client
+    in the dependencies in the package.json is for bundling purpose.
+  - It Dev mode, you need to go to the dist folder to run the following
+    - node index.js serve
+
+local-api
+  - In Prod mode, it launches an express server and loads the local-client 
+    production build to the browser when you visit the site
+  - In Dev mode, it just sends the requests to the Create React App 
+    Dev server
+  - In depends on local-client simply because it needs to figure out
+    where the build folder is
+  - It's responsible for saving cells to a local file      
+
+local-client
+  - calls APIs hosted in local-api
+  - all dependencies are dev dependencies as users are running the 
+    production build
+  - In Dev mode, don't use the site launched from http://localhost:3000
+    use the side launched from the cli instead as for example:
+    http://localhost:4005. This is because APIs are hosted at the 
+    local-api express server not the Create React App Dev server.  

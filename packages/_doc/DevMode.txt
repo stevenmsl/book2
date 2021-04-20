@@ -1,0 +1,27 @@
+- Install https://www.npmjs.com/package/lerna globally
+  - Use version 3.22.1
+
+- Install dependencies for all packages
+  - In PowerShell, change to the project dir and run the
+    following
+  - lerna bootstrap
+  
+
+- Launch TSC watch mode for cli & local-api. Launch 
+  Create React App Dev Server for local-client
+  - In PowerShell, change to the project dir and run the
+    following
+  - npm run start
+
+- Ignore the site launched by Create React App Dev Server
+  - ignore the site on http://localhost:3000/
+  - check "ArchitectureNotes.txt for the reason
+
+- Launch local-api express server
+  - In , change to the cli package dist folder and run the
+    following
+  - node index.js serve
+
+- Visit http://localhost:4005/ 
+  
+
